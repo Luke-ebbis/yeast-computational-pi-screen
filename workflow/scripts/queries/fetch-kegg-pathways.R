@@ -8,9 +8,9 @@ get_kegg_data <- function(kegg_gene_id) {
     current_obj <- obj
     paths <- current_obj[[1]]$PATHWAY
     paths_df <- paths |> data.frame() |>
-      rownames_to_column() |> 
-      mutate(KEGG = id)
-    keggset <- bind_rows(keggset, paths_df)
+      tibble::rownames_to_column() |> 
+      dplyr::mutate(KEGG = id)
+    keggset <- dplyr::bind_rows(keggset, paths_df)
   }
   return(keggset)
 }
