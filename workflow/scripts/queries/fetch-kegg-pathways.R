@@ -4,13 +4,20 @@ get_kegg_data <- function(kegg_gene_id) {
     id <- kegg_gene_id[i]
     message(stringr::str_glue("retrieving {id}"))
     kegg_gene <- stringr::str_glue("sce:{id}")
-    obj <- KEGGREST::keggGet(kegg_gene)
-    current_obj <- obj
-    paths <- current_obj[[1]]$PATHWAY
-    paths_df <- paths |> data.frame() |>
-      tibble::rownames_to_column() |> 
-      dplyr::mutate(KEGG = id)
-    keggset <- dplyr::bind_rows(keggset, paths_df)
+    
+    tryCatch(expr = {
+      obj <- KEGGREST::keggGet(kegg_gene)
+      current_obj <- obj
+      paths <- current_obj[[1]]$PATHWAY
+      paths_df <- paths |> data.frame() |>
+        tibble::rownames_to_column() |> 
+        dplyr::mutate(KEGG = id)
+      keggset <- dplyr::bind_rows(keggset, paths_df) },
+      error = function(e) {
+        message(stringr::str_glue("fetch failed for {id} because of {e}"))
+      })
+    
+    
   }
   return(keggset)
 }
