@@ -1,2 +1,1 @@
 https://modelarchive.org/api/projects/ma-bak-cepc?type=materials_procedures__accompanying_data_file_name
-https://sgd-prod-upload.s3.amazonaws.com/S000312563/34762488.zip
