@@ -3,7 +3,7 @@ name = "yeast-computational-pi-screen"
 version = "0.1.0"
 description = "Add a short description here"
 authors = ["Sibbe Bakker <sibbe.bakker@wur.nl>"]
-channels = ["conda-forge", "bioconda"]
+channels = ["conda-forge", "bioconda", "Pypi", "PyPi", "pypi"]
 platforms = ["linux-64"]
 
 [tasks]

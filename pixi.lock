@@ -4,6 +4,9 @@ environments:
     channels:
     - url: https://conda.anaconda.org/conda-forge/
     - url: https://conda.anaconda.org/bioconda/
+    - url: https://conda.anaconda.org/Pypi/
+    - url: https://conda.anaconda.org/PyPi/
+    - url: https://conda.anaconda.org/pypi/
     packages:
       linux-64:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
@@ -18,8 +21,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/attrs-23.2.0-pyh71513ae_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/boltons-24.0.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/boto-2.49.0-py_0.tar.bz2
-      - conda: https://conda.anaconda.org/conda-forge/noarch/boto3-1.34.82-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/botocore-1.34.82-pyge310_1234567_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/boto3-1.34.84-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/botocore-1.34.84-pyge310_1234567_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/brotli-python-1.1.0-py312h30efb56_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/bz2file-0.98-py_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/bzip2-1.0.8-hd590300_5.conda
@@ -32,7 +35,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/coin-or-cbc-2.10.10-h9002f0b_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/coin-or-cgl-0.60.7-h516709c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/coin-or-clp-1.17.8-h1ee7a9c_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/coin-or-osi-0.108.8-ha2443b9_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/coin-or-osi-0.108.10-haf5fa05_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/coin-or-utils-2.11.11-hee58242_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/coincbc-2.10.10-0_metapackage.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/colorama-0.4.6-pyhd8ed1ab_0.tar.bz2
@@ -165,7 +168,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ruamel.yaml-0.18.6-py312h98912ed_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ruamel.yaml.clib-0.2.8-py312h98912ed_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/s3transfer-0.10.1-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/setuptools-69.2.0-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/setuptools-69.5.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/six-1.16.0-pyh6c4a22f_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/slack-sdk-3.27.1-pyha770c72_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/slack_sdk-3.27.1-hd8ed1ab_0.conda
@@ -391,31 +394,31 @@ packages:
   timestamp: 1545692484380
 - kind: conda
   name: boto3
-  version: 1.34.82
+  version: 1.34.84
   build: pyhd8ed1ab_0
   subdir: noarch
   noarch: python
-  url: https://conda.anaconda.org/conda-forge/noarch/boto3-1.34.82-pyhd8ed1ab_0.conda
-  sha256: f800cf0f30b06d646bba4ea3fa0f19a1b7fb969842dab047801809eb9f43393d
-  md5: fcb5d9faa80b76a1b7e34ad177200fa8
+  url: https://conda.anaconda.org/conda-forge/noarch/boto3-1.34.84-pyhd8ed1ab_0.conda
+  sha256: 756f2f89611edbcadf57c27700ef6c790caa4921db440d42c10058e2fcd39f87
+  md5: 95c41e8359ed0bd20cb44c0e7bfcfb5e
   depends:
-  - botocore >=1.34.82,<1.35.0
+  - botocore >=1.34.84,<1.35.0
   - jmespath >=0.7.1,<2.0.0
   - python >=3.8
   - s3transfer >=0.10.0,<0.11.0
   license: Apache-2.0
   license_family: Apache
-  size: 80788
-  timestamp: 1712819426726
+  size: 80875
+  timestamp: 1712962665185
 - kind: conda
   name: botocore
-  version: 1.34.82
+  version: 1.34.84
   build: pyge310_1234567_0
   subdir: noarch
   noarch: python
-  url: https://conda.anaconda.org/conda-forge/noarch/botocore-1.34.82-pyge310_1234567_0.conda
-  sha256: 295041b24ff4bd56ce9d6e7b258aed560b6a3e674d859af27c088ddc5bc29ab4
-  md5: 085ee814a12862422a27cffcbf1cf35d
+  url: https://conda.anaconda.org/conda-forge/noarch/botocore-1.34.84-pyge310_1234567_0.conda
+  sha256: 89bd9a39f7d4eb3e8b2342fb234b5539abe772cc8cca902fa362acad924f3d77
+  md5: cef2f343c4485495fcdb4c06eacee723
   depends:
   - jmespath >=0.7.1,<2.0.0
   - python >=3.10
@@ -423,8 +426,8 @@ packages:
   - urllib3 >=1.25.4,!=2.2.0,<3
   license: Apache-2.0
   license_family: Apache
-  size: 6899047
-  timestamp: 1712793640384
+  size: 6929011
+  timestamp: 1712954125621
 - kind: conda
   name: brotli-python
   version: 1.1.0
@@ -639,12 +642,12 @@ packages:
   timestamp: 1681308956927
 - kind: conda
   name: coin-or-osi
-  version: 0.108.8
-  build: ha2443b9_0
+  version: 0.108.10
+  build: haf5fa05_0
   subdir: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/coin-or-osi-0.108.8-ha2443b9_0.conda
-  sha256: b88e6242b20d747e95a4171d59c9fa68826ce7ed1e1d1116f614983c7e1d5d1b
-  md5: 7e4adb609b8bf87746d6fab1062348c8
+  url: https://conda.anaconda.org/conda-forge/linux-64/coin-or-osi-0.108.10-haf5fa05_0.conda
+  sha256: 0cba2f5d91bca83a3de727a6180842dc72f3930041d5399671b6316d07edd311
+  md5: 31465c0cbac3c466b9915563147e21bb
   depends:
   - bzip2 >=1.0.8,<2.0a0
   - coin-or-utils >=2.11,<2.12.0a0
@@ -658,8 +661,8 @@ packages:
   - coincbc * *_metapackage
   license: EPL-2.0
   license_family: OTHER
-  size: 389406
-  timestamp: 1681308647472
+  size: 372978
+  timestamp: 1713104263049
 - kind: conda
   name: coin-or-utils
   version: 2.11.11
@@ -2927,19 +2930,19 @@ packages:
   timestamp: 1710497407653
 - kind: conda
   name: setuptools
-  version: 69.2.0
+  version: 69.5.1
   build: pyhd8ed1ab_0
   subdir: noarch
   noarch: python
-  url: https://conda.anaconda.org/conda-forge/noarch/setuptools-69.2.0-pyhd8ed1ab_0.conda
-  sha256: 78a75c75a5dacda6de5f4056c9c990141bdaf4f64245673a590594d00bc63713
-  md5: da214ecd521a720a9d521c68047682dc
+  url: https://conda.anaconda.org/conda-forge/noarch/setuptools-69.5.1-pyhd8ed1ab_0.conda
+  sha256: 72d143408507043628b32bed089730b6d5f5445eccc44b59911ec9f262e365e7
+  md5: 7462280d81f639363e6e63c81276bd9e
   depends:
   - python >=3.8
   license: MIT
   license_family: MIT
-  size: 471183
-  timestamp: 1710344615844
+  size: 501790
+  timestamp: 1713094963112
 - kind: conda
   name: six
   version: 1.16.0
