@@ -1,0 +1,10 @@
+channels:
+- r
+dependencies:
+- r-readr
+- r-stringr
+- r-dplyr
+- r-tibble
+- r-ggplot2
+- r-tidyr
+- r-ggtext

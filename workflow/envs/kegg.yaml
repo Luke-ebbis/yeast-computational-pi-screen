@@ -1,0 +1,14 @@
+channels:
+ - conda-forge
+ - r
+ - bioconda
+dependencies:
+ - r-base = 4.1.1
+ - bioconductor-KEGGREST
+ - r-readr
+ - r-stringr
+ - r-rvest
+ - r-yaml
+ - r-tibble
+ - r-dplyr
+ - r-tidyr

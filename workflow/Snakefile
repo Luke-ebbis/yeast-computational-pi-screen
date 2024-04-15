@@ -1,7 +1,29 @@
+configfile: "config/config.yml"
+
+
+
 rule download_data:
   input:
     "resources/data/datasets.txt"
   output:
-    directory("results/data/raw")
+    directory("results/data/downloads/")
   shell:
     "wget -i {input} -P {output}"
+
+rule unzip_structure_files:
+  input:
+    "results/data/downloads/ma-bak-cepc?type=materials_procedures__accompanying_data_file_name"
+  output:
+    directory("results/data/raw/structures")
+  shell:
+    "unzip {input} -d {output}"
+    
+rule fetch_pathways:
+  conda:
+    "envs/kegg.yaml"
+  input:
+    "resources/data/metadata.csv"
+  output:
+    "results/data/queries/pathways.csv"
+  script:
+    "scripts/queries/fetch-kegg-pathways.R"
