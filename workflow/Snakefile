@@ -2,6 +2,6 @@ rule download_data:
   input:
     "resources/data/datasets.txt"
   output:
-    dir("results/data/raw")
+    directory("results/data/raw")
   shell:
-    "wget -i {input}"
+    "wget -i {input} -P {output}"
