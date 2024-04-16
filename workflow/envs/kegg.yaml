@@ -12,3 +12,5 @@ dependencies:
  - r-tibble
  - r-dplyr
  - r-tidyr
+ - r-igraph
+ - r-ggnetwork

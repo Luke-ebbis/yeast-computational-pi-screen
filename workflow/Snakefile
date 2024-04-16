@@ -27,3 +27,12 @@ rule fetch_pathways:
     "results/data/queries/pathways.csv"
   script:
     "scripts/queries/fetch-kegg-pathways.R"
+    
+rule run_explore:
+  conda:
+      "envs/kegg.yaml"
+  input:
+    "resources/data/metadata.csv",
+    "results/data/queries/pathways.csv"
+  script:
+    "scripts/analysis/exploration.R"

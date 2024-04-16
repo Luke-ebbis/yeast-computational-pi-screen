@@ -1,6 +1,6 @@
 library(igraph)
 library(tidyverse)
-
+library(ggnetwork)
 #' Turn a protein interaction table into a igraph object.
 #'
 #' @param df A 
@@ -25,8 +25,10 @@ make_edge_list <- function(df=path_records, directed=FALSE) {
 
 
 
-meta <- readr::read_csv("resources/data/metadata.csv",
-                        na = c("na"))
+if(!exists("snakemake")) {
+  meta <- readr::read_csv("resources/data/metadata.csv",
+                          na = c("na"))
+}
 metabolism_interactions <- meta |> 
   dplyr::filter(stringr::str_detect(KEGGpath1, "metabolism") |
            stringr::str_detect(KEGGpath2, "metabolism"))
@@ -93,8 +95,8 @@ g <- path_records |> dplyr::filter(stringr::str_detect(kegg_path1, "Citrate") |
 plot(g,
      edge.width = round(igraph::E(g)$weight * 2))
 
-g <- path_records |> dplyr::filter(stringr::str_detect(kegg_path1, "Citrate") | 
-                                     stringr::str_detect(kegg_path2, "Citrate")) |> 
+g <- path_records |> dplyr::filter(stringr::str_detect(kegg_path1, "Carbon") | 
+                                     stringr::str_detect(kegg_path2, "Carbon")) |> 
   make_edge_list()
 plot(g,
      edge.width = round(igraph::E(g)$weight * 2))
