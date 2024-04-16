@@ -26,7 +26,7 @@ def read_metadata(filepath: str):
                       null_values="na")
 
 
-def collect_kegg_identifiers(metadata: pl.DataFrame, folder: str) -> set[str]:
+def collect_kegg_identifiers(metadata: pl.DataFrame) -> set[str]:
    id_list = [metadata.get_column("KEGG1").to_list(),
               metadata.get_column("KEGG1").to_list()]
    required_identifiers = set([i for i in id_list][0])
