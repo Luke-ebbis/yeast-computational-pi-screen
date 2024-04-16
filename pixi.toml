@@ -11,3 +11,4 @@ platforms = ["linux-64"]
 [dependencies]
 conda = ">=24.3.0,<24.4"
 snakemake = ">=8.10.7,<8.11"
+oxigraph-server = ">=0.3.22,<0.4"

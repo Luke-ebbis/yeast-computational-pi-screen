@@ -126,6 +126,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.4.20240210-h59595ed_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/numpy-1.26.4-py312heda63a1_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.2.1-hd590300_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/oxigraph-server-0.3.22-h59595ed_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/packaging-24.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pandas-2.2.2-py312hfb8ada1_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/peppy-0.40.1-pyhd8ed1ab_0.conda
@@ -2224,6 +2225,21 @@ packages:
   license_family: Apache
   size: 2865379
   timestamp: 1710793235846
+- kind: conda
+  name: oxigraph-server
+  version: 0.3.22
+  build: h59595ed_0
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/oxigraph-server-0.3.22-h59595ed_0.conda
+  sha256: e04fc8e760c80a595c55b976707557b3fb5645689e19a9851543b1390ddf197c
+  md5: d4993493a83ead0a9d01bd2b89cdb52c
+  depends:
+  - ca-certificates
+  - libgcc-ng >=12
+  - libstdcxx-ng >=12
+  license: Apache-2.0 OR MIT
+  size: 5521512
+  timestamp: 1701617621783
 - kind: conda
   name: packaging
   version: '24.0'
