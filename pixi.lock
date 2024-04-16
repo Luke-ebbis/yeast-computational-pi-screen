@@ -120,6 +120,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/logmuse-0.2.6-pyh8c360ce_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/lz4-c-1.9.4-hcb278e6_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/lzo-2.10-h516909a_1000.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/mamba-1.5.8-py312h9460a1c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/markdown-it-py-3.0.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/markupsafe-2.1.5-py312h98912ed_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/mdurl-0.1.2-pyhd8ed1ab_0.conda
@@ -2128,6 +2129,24 @@ packages:
   license_family: GPL2
   size: 321113
   timestamp: 1597681972321
+- kind: conda
+  name: mamba
+  version: 1.5.8
+  build: py312h9460a1c_0
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/mamba-1.5.8-py312h9460a1c_0.conda
+  sha256: 4fcfcf73b2b3cfe7e50fac5488a3dbd51a76a9da93af79b0c5856bc3bece7589
+  md5: b82e8ad83fdeab869ef209d3f419a99c
+  depends:
+  - conda >=24,<25
+  - libmambapy 1.5.8 py312hd9e9ff6_0
+  - openssl >=3.2.1,<4.0a0
+  - python >=3.12,<3.13.0a0
+  - python_abi 3.12.* *_cp312
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 64618
+  timestamp: 1711395503622
 - kind: conda
   name: markdown-it-py
   version: 3.0.0
