@@ -17,5 +17,6 @@ biopython = ">=1.83,<2"
 rdflib = ">=7.0.0,<7.1"
 polars = ">=0.20.21,<0.21"
 mamba = ">=1.5.8,<1.6"
+ipython = ">=8.22.2,<8.23"
 [system-requirements]
 linux="4.18"
