@@ -34,7 +34,7 @@ metabolism_interactions <- meta |>
            stringr::str_detect(KEGGpath2, "metabolism"))
 
 
-paths <- readr::read_csv("pathways.csv")
+paths <- readr::read_csv("results/data/pathways.csv")
 
 path_records <- metabolism_interactions |> 
   dplyr::left_join(paths |> dplyr::rename(KEGG1 = KEGG,

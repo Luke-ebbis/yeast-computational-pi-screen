@@ -3,3 +3,5 @@ channels:
 dependencies:
  - polars
  - biopython
+ - rdflib
+ - yaml

@@ -36,3 +36,11 @@ rule run_explore:
     "results/data/queries/pathways.csv"
   script:
     "scripts/analysis/exploration.R"
+
+rule annotate_proteins:
+  conda:
+    "envs/bio.yaml"
+  input:
+    "resources/data/metadata.csv"
+  script:
+    "scripts/construct/annotate_kegg.py"
