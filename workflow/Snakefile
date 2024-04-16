@@ -42,5 +42,7 @@ rule annotate_proteins:
     "envs/bio.yaml"
   input:
     "resources/data/metadata.csv"
+  output:
+    directory("results/data/queries/sce")
   script:
     "scripts/construct/annotate_kegg.py"
