@@ -1,0 +1,11 @@
+channels:
+- conda-forge
+- pypi
+- bioconda
+- pip
+dependencies:
+- rdflib
+- yaml
+- pip:
+    - metapub
+

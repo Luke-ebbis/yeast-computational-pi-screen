@@ -1,0 +1,7 @@
+channels:
+- r
+dependencies:
+- r-readr
+- r-stringr
+- r-rvest
+- r-yaml
