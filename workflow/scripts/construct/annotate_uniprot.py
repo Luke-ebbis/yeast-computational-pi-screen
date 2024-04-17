@@ -115,7 +115,7 @@ def metabolic_query():
             ?protein_classification rdfs:subClassOf <http://purl.obolibrary.org/obo/GO_0044238>.
             ?protein_classification rdfs:label ?biotype .
             }
-        } limit 10
+        } 
     """
     return query
 
