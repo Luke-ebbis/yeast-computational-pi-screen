@@ -115,7 +115,7 @@ def metabolic_query():
             ?protein_classification rdfs:subClassOf <http://purl.obolibrary.org/obo/GO_0044238>.
             ?protein_classification rdfs:label ?biotype .
             }
-        } 
+        } limit 10
     """
     return query
 
@@ -139,7 +139,10 @@ def result_to_df(query_result: Result) -> DataFrame:
         names.append(str(row.name))
         golink.append(str(row.protein_classification))
         goname.append(str(row.biotype))
-    df = DataFrame({"uniprot" : identifiers,
+    df = DataFrame({"id" :
+                    [i.replace("http://purl.uniprot.org/uniprot/", "")
+                     for i in identifiers],
+                    "uniprot" : identifiers,
                     "name": names,
                     "go" : golink,
                     "go_name" : goname })

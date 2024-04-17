@@ -43,6 +43,6 @@ rule annotate_proteins:
   input:
     "resources/data/metadata.csv"
   output:
-    directory("results/data/queries/sce")
+    "results/data/queries/uniprot/primary-go-annotation.csv"
   script:
-    "scripts/construct/annotate_kegg.py"
+    "scripts/construct/annotate_uniprot.py"
