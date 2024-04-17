@@ -101,8 +101,8 @@ for (path_name in kegg_paths_to_plot) {
   path <-  make_graph_of_filtered_data(path_records, 
                                             colname = "kegg_path",
                                             path_pattern = path_name) 
-  path_name <- stringr::str_replace_all(path_name, "\\s/", "_")
-  png(stringr::str_glue("results/analysis/figures/prelim/kegg/{path_name}.png"),
+  file_path_name <- stringr::str_replace_all(path_name, "\\s/", "_")
+  png(stringr::str_glue("results/analysis/figures/prelim/kegg/{file_path_name}.png"),
       600, 600)
   igraph::V(path)$label.cex = 1.5
   plot(path,
@@ -116,8 +116,9 @@ for (path_name in go_paths_to_plot) {
   path <-  make_graph_of_filtered_data(path_records, 
                                        colname = "uniprot_go",
                                        path_pattern = path_name) 
-  path_name <- stringr::str_replace_all(path_name, "\\s/", "_")
-  png(stringr::str_glue("results/analysis/figures/prelim/go/{path_name}.png"),
+  file_path_name <- stringr::str_replace_all(path_name, "\\s/", "_") |> 
+    stringr::str_replace_all("\\s", "_")
+  png(stringr::str_glue("results/analysis/figures/prelim/go/{file_path_name}.png"),
       600, 600)
   igraph::V(path)$label.cex = 1.5
   plot(path,
