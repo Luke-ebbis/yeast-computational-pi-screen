@@ -18,13 +18,13 @@ rule unzip_structure_files:
   shell:
     "unzip {input} -d {output}"
     
-rule fetch_pathways:
+rule annotate_proteins_kegg:
   conda:
     "envs/kegg.yaml"
   input:
     "resources/data/metadata.csv"
   output:
-    "results/data/queries/pathways.csv"
+    "results/data/queries/kegg/pathways.csv"
   script:
     "scripts/queries/fetch-kegg-pathways.R"
     
@@ -33,7 +33,8 @@ rule run_explore:
       "envs/kegg.yaml"
   input:
     "resources/data/metadata.csv",
-    "results/data/queries/pathways.csv"
+    "results/data/queries/kegg/kegg-pathways.csv",
+    "results/data/queries/uniprot/primary-go-annotation.csv"
   script:
     "scripts/analysis/exploration.R"
 
