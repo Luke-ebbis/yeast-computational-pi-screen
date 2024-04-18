@@ -1,0 +1,28 @@
+```sparql
+PREFIX GO: <http://purl.obolibrary.org/obo/GO_>
+PREFIX up: <http://purl.uniprot.org/core/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+select distinct ?protein ?name ?go_label ?go_term ?go_filter ?go_filter_label
+WHERE {
+  VALUES (?ac) {("Q42525")
+    ("P49095") ("P16750")}
+  BIND (IRI(CONCAT("http://purl.uniprot.org/uniprot/",?ac)) AS ?protein)
+#  ?protein a up:Protein .
+  service <https://sparql.uniprot.org/> {
+    ?protein up:recommendedName ?rec_name .
+    ?protein up:classifiedWith ?go_term, ?go_filter .
+    ?rec_name up:fullName ?name .
+    
+    ?go_term up:database <http://purl.uniprot.org/database/go> .
+    ?go_filter up:database <http://purl.uniprot.org/database/go> .
+
+    OPTIONAL {
+      # a primary metabolism
+      ?go_filter rdfs:subClassOf* GO:0044238 .
+      ?go_filter rdfs:label ?go_filter_label .
+    }
+    ?go_term rdfs:label ?go_label .
+  }
+}
+```
